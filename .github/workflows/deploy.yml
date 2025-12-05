@@ -1,4 +1,4 @@
-name: Deploy Portfolio
+name: Deploy Portfolio (Root Domain)
 
 on:
   push:
@@ -30,6 +30,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # Upload Vite build output
           path: ./dist
 
   deploy:
@@ -39,6 +40,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (Root)
         id: deploy
         uses: actions/deploy-pages@v4
