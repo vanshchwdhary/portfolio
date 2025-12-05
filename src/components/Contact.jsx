@@ -141,7 +141,8 @@ export default function Contact() {
 
                   {/* Submit */}
                   <button
-                    type="submit"
+                    type="button"
+                    onClick={sendEmail}
                     disabled={loading}
                     className={`w-full mt-1 py-3 rounded-md text-white font-medium ${
                       loading ? "bg-gray-600 cursor-not-allowed" : "bg-black hover:bg-gray-900"
